@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomadalle Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('/images/landiing_img.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      width: 100%;
+      position: relative; /* Now scrolls with the page */
+    }
+
+    .navbar h2 {
+      font-size: 1.8rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ccc;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      min-height: 100vh;
+      padding: 40px 20px 80px; /* Adjusted for non-fixed navbar */
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 30px 20px;
+      color: #fff;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #f1f1f1;
+    }
+
+    .card button {
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #fff;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        text-align: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Nomadalle</h2>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Profile</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="overlay">
+    <h1>Welcome to Nomadalle</h1>
+
+    <div class="grid">
+      <!-- AI Chatbox -->
+      <div class="card">
+        <h2>🧠 Talk to Nomadalle</h2>
+        <p>Your AI travel companion to chat, explore, and vibe with.</p>
+        <button onclick="location.href='aichatbox.html'">Chat Now</button>
+      </div>
+
+      <!-- Mood Selector -->
+      <div class="card">
+        <h2>🎭 Your Mood, Your Guide</h2>
+        <p>Select your current mood and let Nomadalle suggest the perfect place.</p>
+        <button onclick="location.href='mood.html'">Pick Mood</button>
+      </div>
+
+      <!-- RouteMap -->
+      <div class="card">
+        <h2>🗺️ Let the Ocean Lead</h2>
+        <p>View nearby hidden gems and places based on your vibe.</p>
+        <button onclick="location.href='routemap.html'">Open Map</button>
+      </div>
+
+      <!-- User Chatbox -->
+      <div class="card">
+        <h2>💬 Meet Fellow Wanderers</h2>
+        <p>Join a global community and chat with people just like you.</p>
+        <button onclick="location.href='userchat.html'">Start Chatting</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Nomadalle. All rights reserved.
+  </footer>
+
+</body>
+</html>
