@@ -94,7 +94,7 @@
 
         <button type="submit">Sign In</button>
       </form>
-      <a id="forgotPasswordLink">Forgot password?</a>
+      <a id="forgotPasswordLink" onclick="location.href='signup.html'">Forgot password?</a>
     </div>
   </div>
 
@@ -113,7 +113,7 @@
     });
 
     document.getElementById("forgotPasswordLink").addEventListener("click", function() {
-      alert("Redirecting to password recovery page...");
+      window.location.href = 'forgot_password.html';
     });
   </script>
 </body>
